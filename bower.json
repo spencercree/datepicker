@@ -1,0 +1,15 @@
+{
+  "name": "<YOUR-FIREBASE-APP>",
+  "keywords": [
+    "firebase"
+  ],
+  "main": "html/index.html",
+  "license": "Apache 2.0",
+  "dependencies": {
+    "angularfire": "^1.1.x"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components"
+  ]
+}
