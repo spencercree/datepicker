@@ -21,14 +21,14 @@ function main(RSVP, name) {
   function replaceStringInFile(path, find, replace) {
     return new RSVP.Promise(function (resolve, reject) {
       fs.readFile(__dirname + '/' + path, 'utf8', function(error, data) {
-        if (err) {
+        if (error) {
           reject('Error reading file ' + __dirname + '/' + path + ': ' + error);
         }
       
         var replacedFile = data.replace(find, replace);
       
         fs.writeFile(__dirname + '/' + path, replacedFile, function(error) {
-          if (err) {
+          if (error) {
             reject('Error writing file ' + __dirname + '/' + path + ': ' + error);
           } else {
             resolve();
