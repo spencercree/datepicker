@@ -16,7 +16,7 @@
 
 var fs = require('fs');
 var exec = require('child_process').exec;
-var RSVP = require('rscp');
+var RSVP = require('rsvp');
 
 function replaceStringInFile(path, find, replace) {
   return new RSVP.Promise(function (resolve, reject) {
