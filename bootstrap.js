@@ -17,28 +17,26 @@
 var fs = require('fs');
 var exec = require('child_process').exec;
 
-function replaceStringInFile(path, find, replace) {
-  return new RSVP.Promise(function (resolve, reject) {
-    fs.readFile(__dirname + '/' + path, 'utf8', function(error, data) {
-      if (err) {
-        reject('Error reading file ' + __dirname + '/' + path + ': ' + error);
-      }
-    
-      var replacedFile = data.replace(find, replace);
-    
-      fs.writeFile(__dirname + '/' + path, replacedFile, function(error) {
+function main(RSVP, name) {
+  function replaceStringInFile(path, find, replace) {
+    return new RSVP.Promise(function (resolve, reject) {
+      fs.readFile(__dirname + '/' + path, 'utf8', function(error, data) {
         if (err) {
-          reject('Error writing file ' + __dirname + '/' + path + ': ' + error);
-        } else {
-          resolve();
+          reject('Error reading file ' + __dirname + '/' + path + ': ' + error);
         }
+      
+        var replacedFile = data.replace(find, replace);
+      
+        fs.writeFile(__dirname + '/' + path, replacedFile, function(error) {
+          if (err) {
+            reject('Error writing file ' + __dirname + '/' + path + ': ' + error);
+          } else {
+            resolve();
+          }
+        });
       });
     });
-  });
-}
-
-function main(name) {
-  // Namespace renaming
+  }
 
   return RSVP.all([
     replaceStringInFile('./js/app.js', /<YOUR-FIREBASE-APP>/g, name),
