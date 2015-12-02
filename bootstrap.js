@@ -15,10 +15,7 @@
  */
 
 var fs = require('fs');
-var sys = require('sys')
 var exec = require('child_process').exec;
-
-function puts(error, stdout, stderr) { sys.puts(stdout) }
 
 function replaceStringInFile(path, find, replace) {
   fs.readFile(__dirname + '/' + path, 'utf8', function(error, data) {
@@ -46,10 +43,10 @@ function main(name) {
   }
 
   // npm install bower (if not exists)
-  exec("npm install -g bower", puts);
+  exec("npm install -g bower", function () {console.log(arguments)});
 
   // bower install
-  exec("bower install", puts);
+  exec("bower install", function () {console.log(arguments)});
 }
 
 module.exports = {
