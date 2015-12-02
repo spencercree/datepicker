@@ -16,18 +16,22 @@
 
 var fs = require('fs');
 var exec = require('child_process').exec;
+var RSVP = require('rscp');
 
 function replaceStringInFile(path, find, replace) {
-  fs.readFile(__dirname + '/' + path, 'utf8', function(error, data) {
+  return new RSVP.Promise(function (resolve, reject) {
+    fs.readFile(__dirname + '/' + path, 'utf8', function(error, data) {
     if (err) {
-      throw new Error('Error reading file ' + __dirname + '/' + path + ': ' + error);
+      reject('Error reading file ' + __dirname + '/' + path + ': ' + error);
     }
 
     var replacedFile = data.replace(find, replace);
 
     fs.writeFile(__dirname + '/' + path, replacedFile, function(error) {
       if (err) {
-        throw new Error('Error writing file ' + __dirname + '/' + path + ': ' + error);
+        reject('Error writing file ' + __dirname + '/' + path + ': ' + error);
+      } else {
+        resolve();
       }
     });
   });
@@ -36,17 +40,17 @@ function replaceStringInFile(path, find, replace) {
 function main(name) {
   // Namespace renaming
 
-  if (name) {
-    replaceStringInFile('./js/app.js', /<YOUR-FIREBASE-APP>/g, name);
-    replaceStringInFile('./html/index.html', /<YOUR-FIREBASE-APP>/g, name);
-    replaceStringInFile('./bower.json', /<YOUR-FIREBASE-APP>/g, name);
-  }
+  return RSVP.all([
+    replaceStringInFile('./js/app.js', /<YOUR-FIREBASE-APP>/g, name),
+    replaceStringInFile('./html/index.html', /<YOUR-FIREBASE-APP>/g, name),
+    replaceStringInFile('./bower.json', /<YOUR-FIREBASE-APP>/g, name)
+  ]);
 
   // npm install bower (if not exists)
-  exec("npm install -g bower", function () {console.log(arguments)});
+  //exec("npm install -g bower", function () {console.log(arguments)});
 
   // bower install
-  exec("bower install", function () {console.log(arguments)});
+  //exec("bower install", function () {console.log(arguments)});
 }
 
 module.exports = {
