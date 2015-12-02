@@ -17,6 +17,7 @@
 var fs = require('fs');
 var sys = require('sys')
 var exec = require('child_process').exec;
+
 function puts(error, stdout, stderr) { sys.puts(stdout) }
 
 function replaceStringInFile(path, find, replace) {
@@ -35,10 +36,9 @@ function replaceStringInFile(path, find, replace) {
   });
 }
 
-function main() {
+function main(name) {
   // Namespace renaming
-  var args = process.argv.slice(2);
-  var name = args[0];
+
   if (name) {
     replaceStringInFile('./js/app.js', /<YOUR-FIREBASE-APP>/g, name);
     replaceStringInFile('./html/index.html', /<YOUR-FIREBASE-APP>/g, name);
@@ -52,4 +52,6 @@ function main() {
   exec("bower install", puts);
 }
 
-main();
+module.exports = {
+  setup: main
+}
