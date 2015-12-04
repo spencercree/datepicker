@@ -68,13 +68,15 @@ function main(RSVP, name) {
 
   function installBowerDependencies(location) {
     console.log("Installing Bower dependecies...");
-    var command;
+    var bower_path, command;
 
     if (location == "temporary") {
-      command = os.tmpdir() + "/fb_bootstrap/node_modules/.bin/bower install";
+      bower_path = os.tmpdir() + "/fb_bootstrap/node_modules/.bin/bower";
     } else {
-      command = "bower install";
+      bower_path = "bower";
     }
+
+    command = [bower_path, "install", __dirname].join(" ");
 
     return promisedExec(command);
   }
