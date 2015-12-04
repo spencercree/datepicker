@@ -87,15 +87,13 @@ function main(RSVP, name) {
   }
 
   /* Bootstrap */
-  return checkForBower()
-    .then(installBowerDependencies)
-    .then(renameToFirebaseApp)
-    .then(function () {
-      console.log("Bootstrapped!")
-    })
-    .catch(function (err) {
-      console.log("Something went wrong :(", err)
-    });
+  return new RSVP.Promise(function (resolve, reject) {
+    checkForBower()
+      .then(installBowerDependencies)
+      .then(renameToFirebaseApp)
+      .then(resolve)
+      .catch(reject);
+  });
 }
 
 function getNodeModule(moduleName, cb) {
@@ -113,7 +111,17 @@ module.exports = {
 
 if (require.main === module) {
   getNodeModule("rsvp", function (err, RSVP) {
-    if (err) throw new Error(err);
-    else main.apply(this, [RSVP].concat(process.argv.slice(2)))
+    if (err) {
+      throw new Error(err);
+    } else {
+      main
+        .apply(this, [RSVP].concat(process.argv.slice(2)))
+        .then(function () {
+          console.log("Bootstrapped!");
+        })
+        .catch(function () {
+          console.error("Something went wrong!");
+        })
+    }
   });
 }
