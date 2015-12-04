@@ -18,6 +18,8 @@ var fs = require('fs');
 var exec = require('child_process').exec;
 var os = require('os');
 
+const TMP_DIR = os.tmpdir() + "/fb_bootstrap";
+
 function main(RSVP, name) {
   /* Utility Methods */
   function replaceStringInFile(path, find, replace) {
@@ -56,7 +58,7 @@ function main(RSVP, name) {
       exec("bower -v", function (err, stdout, stderr) {
         if (err) {
           console.log("Temporarily install Bower...");
-          promisedExec("npm install bower --prefix " + os.tmpdir() + "/fb_bootstrap")
+          promisedExec("npm install bower --prefix " + TMP_DIR)
             .then(resolve.bind(resolve, "temporary"))
             .catch(reject);
         } else {
@@ -71,7 +73,7 @@ function main(RSVP, name) {
     var bower_path, command;
 
     if (location == "temporary") {
-      bower_path = os.tmpdir() + "/fb_bootstrap/node_modules/.bin/bower";
+      bower_path = TMP_DIR + "/node_modules/.bin/bower";
     } else {
       bower_path = "bower";
     }
@@ -103,7 +105,7 @@ function getNodeModule(moduleName, cb) {
     if (err)
       cb(err);
     else
-      cb(null, require(os.tmpdir() + "/fb_bootstrap/node_modules/" + moduleName));
+      cb(null, require(TMP_DIR + "/node_modules/" + moduleName));
   });
 }
 
