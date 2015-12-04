@@ -16,17 +16,19 @@
 
 var fs = require('fs');
 var exec = require('child_process').exec;
+var os = require('os');
 
 function main(RSVP, name) {
+  /* Utility Methods */
   function replaceStringInFile(path, find, replace) {
     return new RSVP.Promise(function (resolve, reject) {
       fs.readFile(__dirname + '/' + path, 'utf8', function(error, data) {
         if (error) {
           reject('Error reading file ' + __dirname + '/' + path + ': ' + error);
         }
-      
+
         var replacedFile = data.replace(find, replace);
-      
+
         fs.writeFile(__dirname + '/' + path, replacedFile, function(error) {
           if (error) {
             reject('Error writing file ' + __dirname + '/' + path + ': ' + error);
@@ -38,19 +40,80 @@ function main(RSVP, name) {
     });
   }
 
-  return RSVP.all([
-    replaceStringInFile('./js/app.js', /<YOUR-FIREBASE-APP>/g, name),
-    replaceStringInFile('./html/index.html', /<YOUR-FIREBASE-APP>/g, name),
-    replaceStringInFile('./bower.json', /<YOUR-FIREBASE-APP>/g, name)
-  ]);
+  function promisedExec(command) {
+    return new RSVP.Promise(function (resolve, reject) {
+      exec(command, function (err, stdout, stderr) {
+        if (err) reject(err);
+        else resolve(stdout);
+      });
+    });
+  }
 
-  // npm install bower (if not exists)
-  //exec("npm install -g bower", function () {console.log(arguments)});
+  /* Repo Specific Methods */
+  function checkForBower() {
+    console.log("Looking for local Bower...");
+    return new RSVP.Promise(function (resolve, reject) {
+      exec("bower -v", function (err, stdout, stderr) {
+        if (err) {
+          console.log("Temporarily install Bower...");
+          promisedExec("npm install bower --prefix " + os.tmpdir() + "/fb_bootstrap")
+            .then(resolve.bind(resolve, "temporary"))
+            .catch(reject);
+        } else {
+          resolve("local");
+        }
+      })
+    });
+  }
 
-  // bower install
-  //exec("bower install", function () {console.log(arguments)});
+  function installBowerDependencies(location) {
+    console.log("Installing Bower dependecies...");
+    var command;
+
+    if (location == "temporary") {
+      command = os.tmpdir() + "/fb_bootstrap/node_modules/.bin/bower install";
+    } else {
+      command = "bower install";
+    }
+
+    return promisedExec(command);
+  }
+
+  function renameToFirebaseApp() {
+    console.log("Renaming application...");
+    return RSVP.all(['./js/app.js', './html/index.html', './bower.json'].map(function (file) {
+      return replaceStringInFile(file, /<YOUR-FIREBASE-APP>/g, name);
+    }));
+  }
+
+  /* Bootstrap */
+  return checkForBower()
+    .then(installBowerDependencies)
+    .then(renameToFirebaseApp)
+    .then(function () {
+      console.log("Bootstrapped!")
+    })
+    .catch(function (err) {
+      console.log("Something went wrong :(", err)
+    });
+}
+
+function getNodeModule(moduleName, cb) {
+  exec("npm install " + moduleName + " --prefix " + os.tmpdir() + "/fb_bootstrap", function (err, stdout, stderr) {
+    if (err)
+      cb(err);
+    else
+      cb(null, require(os.tmpdir() + "/fb_bootstrap/node_modules/" + moduleName));
+  });
 }
 
 module.exports = {
   setup: main
+}
+
+if (require.main === module) {
+  getNodeModule("rsvp", function (err, RSVP) {
+    if (err) throw new Error(err);
+    else main.apply(this, [RSVP].concat(process.argv.slice(2)))
+  });
 }
