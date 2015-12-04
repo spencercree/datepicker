@@ -3,8 +3,8 @@ Open js/app.js to define your Javascript
 Open html/index.html to define your HTML
 Open css/stylesheet.css to define your CSS
 
-  * Run `python -m SimpleHTTPServer 8080`
-  * Visit http://127.0.0.1:8080/html/index.html
+  * Run `firebase serve`
+  * Visit http://127.0.0.1:5000
 
 # Rename Your Project
 You can rename your project to whatever you'd like.
