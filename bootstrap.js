@@ -21,20 +21,20 @@ var os = require('os');
 
 const TMP_DIR = os.tmpdir() + "/fb_bootstrap";
 
-function main(RSVP, name) {
+function main(RSVP, name, dest) {
   /* Utility Methods */
   function replaceStringInFile(path, find, replace) {
     return new RSVP.Promise(function (resolve, reject) {
-      fs.readFile(__dirname + '/' + path, 'utf8', function(error, data) {
+      fs.readFile(dest + '/' + path, 'utf8', function(error, data) {
         if (error) {
-          reject('Error reading file ' + __dirname + '/' + path + ': ' + error);
+          reject('Error reading file ' + dest + '/' + path + ': ' + error);
         }
 
         var replacedFile = data.replace(find, replace);
 
-        fs.writeFile(__dirname + '/' + path, replacedFile, function(error) {
+        fs.writeFile(dest + '/' + path, replacedFile, function(error) {
           if (error) {
-            reject('Error writing file ' + __dirname + '/' + path + ': ' + error);
+            reject('Error writing file ' + dest + '/' + path + ': ' + error);
           } else {
             resolve();
           }
@@ -79,7 +79,7 @@ function main(RSVP, name) {
       bower_path = "bower";
     }
 
-    command = [bower_path, "install", __dirname].join(" ");
+    command = [bower_path, "install", dest].join(" ");
 
     return promisedExec(command);
   }
