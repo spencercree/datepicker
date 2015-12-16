@@ -79,7 +79,7 @@ function main(RSVP, name, dest) {
       bower_path = "bower";
     }
 
-    command = [bower_path, "install", dest].join(" ");
+    command = [bower_path, "install", "--config.cwd="+ dest].join(" ");
 
     return promisedExec(command);
   }
