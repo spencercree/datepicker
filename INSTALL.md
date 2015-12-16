@@ -14,4 +14,5 @@ to rename your app.
 # Manually Bootstrap
 If you didn't `firebase init` this project
 you can manually set the project up by running
-`node bootstrap.js "namespace"`
+
+`node bootstrap.js "namespace" .`
