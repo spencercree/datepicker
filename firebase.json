@@ -2,6 +2,6 @@
   "public": "public",
   "rewrites": [ {
     "source": "**",
-    "destination": "/index.html"
+    "destination": "/html/index.html"
   } ]
 }
