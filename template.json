@@ -4,7 +4,7 @@
   ],
   "rename": [
     "./public/js/app.js",
-    "./public/html/index.html"
+    "./public/html/index.html",
     "./bower.json"
   ],
   "run": [
