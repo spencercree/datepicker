@@ -17,9 +17,7 @@
 var app = angular.module("<YOUR-FIREBASE-APP>", ["firebase"]);
 app.controller("YourAppController", function($scope, $firebaseObject) {
   // Create a Firebase ref, see: https://firebase.com/docs/web/libraries/angular/guide
-  var ref = new Firebase('https://abe.firebaseio.com');
+  var ref = new Firebase('https://<YOUR-FIREBASE-APP>.firebaseio.com');
 
   // For more info, see: https://firebase.com/docs/web/libraries/angular/quickstart.html
 });
-
-
