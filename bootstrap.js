@@ -86,7 +86,7 @@ function main(RSVP, name, dest) {
 
   function renameToFirebaseApp() {
     console.log("Renaming application...");
-    return RSVP.all(['./js/app.js', './html/index.html', './bower.json'].map(function (file) {
+    return RSVP.all(['./public/js/app.js', './publci/html/index.html', './bower.json'].map(function (file) {
       return replaceStringInFile(file, /<YOUR-FIREBASE-APP>/g, name);
     }));
   }
