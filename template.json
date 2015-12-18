@@ -1,0 +1,13 @@
+{
+  "require": [
+    "bower"
+  ],
+  "rename": [
+    "./public/js/app.js",
+    "./public/html/index.html"
+    "./bower.json"
+  ],
+  "run": [
+    "bower install"
+  ]
+}
