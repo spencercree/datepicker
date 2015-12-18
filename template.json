@@ -1,6 +1,9 @@
 {
   "require": [
-    "bower"
+    {
+      "cmd": "bower",
+      "hint": "This template requires `bower` please run `npm install -g bower` to install."
+    }
   ],
   "rename": [
     "./public/js/app.js",
