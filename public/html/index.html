@@ -16,20 +16,73 @@
 -->
 <html>
   <head>
-    <title>Firebase Angular Starter: <YOUR-FIREBASE-APP></title>
+    <title>Firebase Angular Starter: datepickerdemo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
     <!-- Include angular-->
-    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <!-- Include Firebase Client-->
     <script src="../bower_components/firebase/firebase.js"></script>
     <!-- Include AngularFire-->
     <script src="../bower_components/angularfire/dist/angularfire.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
     <!-- Include application CSS-->
     <link rel="stylesheet" href="../css/stylesheet.css"></link>
   </head>
-  <body>
-    <!-- Add HTML here -->
-    <!-- Include application Javascript-->
+  <body ng-app="datepickerdemo">
+    <div class="container-fluid">
+      <div class="row">
+        <div id="message" class="col-md-5 hidden-xs hidden-sm firstMessage">
+          <div class="aligner">
+            <div class="aligned">
+              <h1>Datepicker Demo</h1>
+              <h3>An example of how to use a datepicker to make reservations over a range and then disable said dates.</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 visible-xs visible-sm secondMessage">
+          <div class="aligner">
+            <div class="aligned">
+              <h1>Datepicker Demo</h1>
+              <h3>An example of how to use a datepicker to make reservations over a range and then disable said dates.</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6" style="padding-top: 50px; padding-bottom: 50px;">
+          <div ng-controller="main">
+            <div class="text-center col-sm-12 col-md-6 datepicker">
+              <md-datepicker ng-model="start_date" md-date-filter="checkAvailable"></md-datepicker>
+            </div>
+            <div class="text-center col-sm-12 col-md-6 datepicker">
+              <md-datepicker ng-model="end_date" md-min-date="start_date" md-date-filter="checkAvailable"></md-datepicker>
+            </div>
+            <div class="clearfix"></div>
+            <div id="buttonsRow" class="col-sm-12">
+              <a class="btn btn-success" ng-click="selectDates()">Reserve</a>
+            </div>
+
+            <h2 style="display:inline-block;">List of Reservations</h2>
+            <p style="display:inline-block;margin-left:30px;"><a ng-click="deleteDates()">Clear</a><p>
+            <table class="table table-striped">
+              <tr>
+                <th>Start Date</th>
+                <th>End Date</th>
+              </tr>
+              <tr ng-repeat="date in dates">
+                <td>{{date.start_date}}</td>
+                <td>{{date.end_date}}</td>
+            </table>
+          <!-- Include application Javascript-->
+          </div> <!-- end of main -->
+        </div> <!-- end of columns -->
+      </div> <!-- end of row -->
+    </div> <!-- end of container-fluid -->
     <script src="../js/app.js"></script>
   </body>
 </html>

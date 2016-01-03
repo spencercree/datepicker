@@ -14,10 +14,46 @@
  * limitations under the License.
  */
 
-var app = angular.module("<YOUR-FIREBASE-APP>", ["firebase"]);
-app.controller("YourAppController", function($scope, $firebaseObject) {
+var app = angular.module("datepickerdemo", ["firebase", "ngMaterial"]);
+app.controller("main", function($scope, $firebaseArray) {
   // Create a Firebase ref, see: https://firebase.com/docs/web/libraries/angular/guide
-  var ref = new Firebase('https://<YOUR-FIREBASE-APP>.firebaseio.com');
+  var ref = new Firebase('https://datepickerdemo.firebaseio.com/dates');
+  $scope.dates = $firebaseArray(ref);
 
-  // For more info, see: https://firebase.com/docs/web/libraries/angular/quickstart.html
+  var windowHeight = window.innerHeight;
+  document.getElementById('message').setAttribute('style', 'height:' + windowHeight + 'px');
+
+  $scope.selectDates = function(){
+    $scope.dates.$add({
+      start_date : dateToString($scope.start_date),
+      end_date : dateToString($scope.end_date)
+    });
+
+    $scope.start_date = "";
+    $scope.end_date = "";
+  };
+
+  $scope.deleteDates = function(){
+    ref.remove();
+  };
+
+  var dateToString = function(dateObj) {
+    var day = dateObj.getDate();
+    var month = dateObj.getMonth()+1;
+    var year = dateObj.getFullYear();
+    return month+'/'+day+'/'+year;
+  };
+
+
+  $scope.checkAvailable = function(date){
+    if (!$scope.dates) {return false;}
+
+    for(var i = 0; $scope.dates.length > i; i++) {
+      if(new Date($scope.dates[i].start_date) <= date && new Date($scope.dates[i].end_date) >= date){
+        return false;
+      }else{}
+    }
+    return true;
+  };
+
 });

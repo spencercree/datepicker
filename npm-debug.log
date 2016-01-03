@@ -1,0 +1,409 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@2.14.7
+3 info using node@v4.2.0
+4 verbose config Skipping project config: /Users/spencermccullough/.npmrc. (matches userconfig)
+5 verbose readDependencies loading dependencies from /Users/spencermccullough/package.json
+6 warn package.json innoang@0.0.0 No license field.
+7 verbose install where, deps [ '/Users/spencermccullough',
+7 verbose install   [ 'grunt',
+7 verbose install     'grunt-autoprefixer',
+7 verbose install     'grunt-concurrent',
+7 verbose install     'grunt-contrib-clean',
+7 verbose install     'grunt-contrib-concat',
+7 verbose install     'grunt-contrib-connect',
+7 verbose install     'grunt-contrib-copy',
+7 verbose install     'grunt-contrib-cssmin',
+7 verbose install     'grunt-contrib-htmlmin',
+7 verbose install     'grunt-contrib-imagemin',
+7 verbose install     'grunt-contrib-jshint',
+7 verbose install     'grunt-contrib-uglify',
+7 verbose install     'grunt-contrib-watch',
+7 verbose install     'grunt-filerev',
+7 verbose install     'grunt-google-cdn',
+7 verbose install     'grunt-newer',
+7 verbose install     'grunt-ng-annotate',
+7 verbose install     'grunt-svgmin',
+7 verbose install     'grunt-usemin',
+7 verbose install     'grunt-wiredep',
+7 verbose install     'jshint-stylish',
+7 verbose install     'load-grunt-tasks',
+7 verbose install     'time-grunt' ] ]
+8 verbose install where, peers [ '/Users/spencermccullough', [] ]
+9 verbose installManyTop reading for lifecycle /Users/spencermccullough/package.json
+10 info preinstall innoang@0.0.0
+11 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/array-uniq/package.json
+12 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/connect/package.json
+13 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/connect-livereload/package.json
+14 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/ghost/package.json
+15 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/grunt/package.json
+16 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/grunt-autoprefixer/package.json
+17 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/grunt-concurrent/package.json
+18 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/grunt-contrib-clean/package.json
+19 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/grunt-contrib-concat/package.json
+20 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/grunt-contrib-connect/package.json
+21 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/grunt-contrib-copy/package.json
+22 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/grunt-contrib-cssmin/package.json
+23 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/grunt-contrib-htmlmin/package.json
+24 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/grunt-contrib-imagemin/package.json
+25 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/grunt-contrib-jshint/package.json
+26 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/grunt-contrib-uglify/package.json
+27 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/grunt-contrib-watch/package.json
+28 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/grunt-filerev/package.json
+29 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/grunt-google-cdn/package.json
+30 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/grunt-karma/package.json
+31 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/grunt-newer/package.json
+32 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/grunt-ng-annotate/package.json
+33 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/grunt-svgmin/package.json
+34 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/grunt-usemin/package.json
+35 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/grunt-wiredep/package.json
+36 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/gulp/package.json
+37 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/gulp-coffee/package.json
+38 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/gulp-concat/package.json
+39 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/gulp-connect/package.json
+40 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/gulp-csso/package.json
+41 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/gulp-html2jade/package.json
+42 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/gulp-imagemin/package.json
+43 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/gulp-jade/package.json
+44 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/gulp-livereload/package.json
+45 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/gulp-myth/package.json
+46 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/gulp-stylus/package.json
+47 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/gulp-uglify/package.json
+48 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/http-server/package.json
+49 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/imagemin/package.json
+50 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/jade/package.json
+51 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/jasmine-core/package.json
+52 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/jekyll/package.json
+53 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/jshint-stylish/package.json
+54 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/karma/package.json
+55 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/karma-jasmine/package.json
+56 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/karma-phantomjs-launcher/package.json
+57 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/load-grunt-tasks/package.json
+58 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/lodash._isnative/package.json
+59 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/lodash.noop/package.json
+60 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/nib/package.json
+61 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/phantomjs/package.json
+62 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/semver-regex/package.json
+63 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/slimerjs/package.json
+64 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/time-grunt/package.json
+65 verbose installManyTop reading scoped package data from /Users/spencermccullough/node_modules/tiny-lr/package.json
+66 info package.json connect-livereload@0.5.2 No license field.
+67 info package.json grunt@0.4.5 No license field.
+68 info package.json gulp-concat@2.4.3 No license field.
+69 info package.json gulp@3.8.10 No license field.
+70 info package.json gulp-stylus@2.0.0 No license field.
+71 info package.json gulp-jade@0.11.0 No license field.
+72 info package.json phantomjs@1.9.17 No license field.
+73 info package.json tiny-lr@0.1.4 No license field.
+74 info package.json slimerjs@0.9.5 No license field.
+75 info package.json grunt-contrib-clean@0.6.0 No license field.
+76 info package.json grunt-contrib-concat@0.5.1 No license field.
+77 info package.json grunt-contrib-htmlmin@0.4.0 No license field.
+78 info package.json grunt-contrib-copy@0.7.0 No license field.
+79 info package.json grunt-contrib-jshint@0.11.1 No license field.
+80 info package.json grunt-contrib-cssmin@0.12.2 No license field.
+81 info package.json grunt-contrib-uglify@0.7.0 No license field.
+82 info package.json grunt-contrib-watch@0.6.1 No license field.
+83 info package.json grunt-contrib-imagemin@0.9.4 No license field.
+84 info package.json grunt-contrib-connect@0.9.0 No license field.
+85 info package.json grunt-google-cdn@0.4.3 license should be a valid SPDX license expression
+86 info package.json grunt-filerev@2.2.0 license should be a valid SPDX license expression
+87 info package.json grunt-newer@1.1.0 No license field.
+88 info package.json grunt-wiredep@2.0.0 No license field.
+89 info package.json gulp-coffee@2.2.0 No license field.
+90 info package.json grunt-svgmin@2.0.1 No license field.
+91 info package.json http-server@0.7.4 No license field.
+92 verbose readDependencies loading dependencies from /Users/spencermccullough/package.json
+93 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/array-uniq/package.json
+94 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/connect/package.json
+95 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/connect-livereload/package.json
+96 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/ghost/package.json
+97 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/grunt/package.json
+98 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/grunt-autoprefixer/package.json
+99 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/grunt-concurrent/package.json
+100 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/grunt-contrib-clean/package.json
+101 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/grunt-contrib-concat/package.json
+102 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/grunt-contrib-connect/package.json
+103 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/grunt-contrib-copy/package.json
+104 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/grunt-contrib-cssmin/package.json
+105 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/grunt-contrib-htmlmin/package.json
+106 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/grunt-contrib-imagemin/package.json
+107 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/grunt-contrib-jshint/package.json
+108 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/grunt-contrib-uglify/package.json
+109 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/grunt-contrib-watch/package.json
+110 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/grunt-filerev/package.json
+111 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/grunt-google-cdn/package.json
+112 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/grunt-karma/package.json
+113 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/grunt-newer/package.json
+114 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/grunt-ng-annotate/package.json
+115 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/grunt-svgmin/package.json
+116 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/grunt-usemin/package.json
+117 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/grunt-wiredep/package.json
+118 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/gulp/package.json
+119 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/gulp-coffee/package.json
+120 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/gulp-concat/package.json
+121 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/gulp-connect/package.json
+122 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/gulp-csso/package.json
+123 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/gulp-html2jade/package.json
+124 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/gulp-imagemin/package.json
+125 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/gulp-jade/package.json
+126 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/gulp-livereload/package.json
+127 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/gulp-myth/package.json
+128 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/gulp-stylus/package.json
+129 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/gulp-uglify/package.json
+130 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/http-server/package.json
+131 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/imagemin/package.json
+132 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/jade/package.json
+133 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/jasmine-core/package.json
+134 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/jekyll/package.json
+135 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/jshint-stylish/package.json
+136 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/karma/package.json
+137 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/karma-jasmine/package.json
+138 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/karma-phantomjs-launcher/package.json
+139 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/load-grunt-tasks/package.json
+140 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/lodash._isnative/package.json
+141 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/lodash.noop/package.json
+142 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/nib/package.json
+143 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/phantomjs/package.json
+144 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/semver-regex/package.json
+145 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/slimerjs/package.json
+146 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/time-grunt/package.json
+147 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/tiny-lr/package.json
+148 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/.bin/gulp/package.json
+149 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/.bin/hs/package.json
+150 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/.bin/http-server/package.json
+151 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/.bin/imagemin/package.json
+152 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/.bin/jade/package.json
+153 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/.bin/phantomjs/package.json
+154 verbose targetResolver reading package data from /Users/spencermccullough/node_modules/.bin/slimerjs/package.json
+155 verbose already installed skipping grunt-contrib-cssmin@^0.12.0 /Users/spencermccullough
+156 verbose already installed skipping grunt-contrib-htmlmin@^0.4.0 /Users/spencermccullough
+157 verbose already installed skipping grunt-contrib-imagemin@^0.9.2 /Users/spencermccullough
+158 verbose already installed skipping grunt-contrib-jshint@^0.11.0 /Users/spencermccullough
+159 verbose already installed skipping grunt-contrib-uglify@^0.7.0 /Users/spencermccullough
+160 verbose already installed skipping grunt-contrib-watch@^0.6.1 /Users/spencermccullough
+161 verbose already installed skipping grunt-filerev@^2.1.2 /Users/spencermccullough
+162 verbose already installed skipping grunt-google-cdn@^0.4.3 /Users/spencermccullough
+163 verbose already installed skipping grunt-newer@^1.1.0 /Users/spencermccullough
+164 verbose already installed skipping grunt-ng-annotate@^0.9.2 /Users/spencermccullough
+165 verbose already installed skipping grunt-svgmin@^2.0.0 /Users/spencermccullough
+166 verbose already installed skipping grunt-usemin@^3.0.0 /Users/spencermccullough
+167 verbose already installed skipping grunt-wiredep@^2.0.0 /Users/spencermccullough
+168 verbose already installed skipping jshint-stylish@^1.0.0 /Users/spencermccullough
+169 verbose already installed skipping load-grunt-tasks@^3.1.0 /Users/spencermccullough
+170 verbose already installed skipping time-grunt@^1.0.0 /Users/spencermccullough
+171 verbose already installed skipping grunt@^0.4.5 /Users/spencermccullough
+172 verbose already installed skipping grunt-autoprefixer@^2.0.0 /Users/spencermccullough
+173 verbose already installed skipping grunt-concurrent@^1.0.0 /Users/spencermccullough
+174 verbose already installed skipping grunt-contrib-clean@^0.6.0 /Users/spencermccullough
+175 verbose already installed skipping grunt-contrib-concat@^0.5.0 /Users/spencermccullough
+176 verbose already installed skipping grunt-contrib-connect@^0.9.0 /Users/spencermccullough
+177 verbose already installed skipping grunt-contrib-copy@^0.7.0 /Users/spencermccullough
+178 silly install resolved []
+179 info build /Users/spencermccullough
+180 info linkStuff innoang@0.0.0
+181 silly linkStuff innoang@0.0.0 has /Users as its parent node_modules
+182 verbose linkBins innoang@0.0.0
+183 verbose linkMans innoang@0.0.0
+184 verbose rebuildBundles innoang@0.0.0
+185 verbose rebuildBundles [ '.DS_Store',
+185 verbose rebuildBundles   '.bin',
+185 verbose rebuildBundles   'array-uniq',
+185 verbose rebuildBundles   'connect',
+185 verbose rebuildBundles   'connect-livereload',
+185 verbose rebuildBundles   'ghost',
+185 verbose rebuildBundles   'grunt',
+185 verbose rebuildBundles   'grunt-autoprefixer',
+185 verbose rebuildBundles   'grunt-concurrent',
+185 verbose rebuildBundles   'grunt-contrib-clean',
+185 verbose rebuildBundles   'grunt-contrib-concat',
+185 verbose rebuildBundles   'grunt-contrib-connect',
+185 verbose rebuildBundles   'grunt-contrib-copy',
+185 verbose rebuildBundles   'grunt-contrib-cssmin',
+185 verbose rebuildBundles   'grunt-contrib-htmlmin',
+185 verbose rebuildBundles   'grunt-contrib-imagemin',
+185 verbose rebuildBundles   'grunt-contrib-jshint',
+185 verbose rebuildBundles   'grunt-contrib-uglify',
+185 verbose rebuildBundles   'grunt-contrib-watch',
+185 verbose rebuildBundles   'grunt-filerev',
+185 verbose rebuildBundles   'grunt-google-cdn',
+185 verbose rebuildBundles   'grunt-karma',
+185 verbose rebuildBundles   'grunt-newer',
+185 verbose rebuildBundles   'grunt-ng-annotate',
+185 verbose rebuildBundles   'grunt-svgmin',
+185 verbose rebuildBundles   'grunt-usemin',
+185 verbose rebuildBundles   'grunt-wiredep',
+185 verbose rebuildBundles   'gulp',
+185 verbose rebuildBundles   'gulp-coffee',
+185 verbose rebuildBundles   'gulp-concat',
+185 verbose rebuildBundles   'gulp-connect',
+185 verbose rebuildBundles   'gulp-csso',
+185 verbose rebuildBundles   'gulp-html2jade',
+185 verbose rebuildBundles   'gulp-imagemin',
+185 verbose rebuildBundles   'gulp-jade',
+185 verbose rebuildBundles   'gulp-livereload',
+185 verbose rebuildBundles   'gulp-myth',
+185 verbose rebuildBundles   'gulp-stylus',
+185 verbose rebuildBundles   'gulp-uglify',
+185 verbose rebuildBundles   'http-server',
+185 verbose rebuildBundles   'imagemin',
+185 verbose rebuildBundles   'jade',
+185 verbose rebuildBundles   'jasmine-core',
+185 verbose rebuildBundles   'jekyll',
+185 verbose rebuildBundles   'jshint-stylish',
+185 verbose rebuildBundles   'karma',
+185 verbose rebuildBundles   'karma-jasmine',
+185 verbose rebuildBundles   'karma-phantomjs-launcher',
+185 verbose rebuildBundles   'load-grunt-tasks',
+185 verbose rebuildBundles   'lodash._isnative',
+185 verbose rebuildBundles   'lodash.noop',
+185 verbose rebuildBundles   'nib',
+185 verbose rebuildBundles   'phantomjs',
+185 verbose rebuildBundles   'semver-regex',
+185 verbose rebuildBundles   'slimerjs',
+185 verbose rebuildBundles   'time-grunt',
+185 verbose rebuildBundles   'tiny-lr' ]
+186 verbose rebuild bundle /Users/spencermccullough/node_modules/array-uniq
+187 info build /Users/spencermccullough/node_modules/array-uniq
+188 info preinstall array-uniq@1.0.2
+189 info linkStuff array-uniq@1.0.2
+190 silly linkStuff array-uniq@1.0.2 has /Users/spencermccullough/node_modules as its parent node_modules
+191 verbose linkBins array-uniq@1.0.2
+192 verbose linkMans array-uniq@1.0.2
+193 verbose rebuildBundles array-uniq@1.0.2
+194 info install array-uniq@1.0.2
+195 info postinstall array-uniq@1.0.2
+196 verbose rebuild bundle /Users/spencermccullough/node_modules/connect
+197 info build /Users/spencermccullough/node_modules/connect
+198 info preinstall connect@3.3.4
+199 info linkStuff connect@3.3.4
+200 silly linkStuff connect@3.3.4 has /Users/spencermccullough/node_modules as its parent node_modules
+201 verbose linkBins connect@3.3.4
+202 verbose linkMans connect@3.3.4
+203 verbose rebuildBundles connect@3.3.4
+204 verbose rebuildBundles [ 'debug', 'finalhandler', 'parseurl', 'utils-merge' ]
+205 info install connect@3.3.4
+206 info postinstall connect@3.3.4
+207 verbose rebuild bundle /Users/spencermccullough/node_modules/connect-livereload
+208 info build /Users/spencermccullough/node_modules/connect-livereload
+209 info preinstall connect-livereload@0.5.2
+210 info linkStuff connect-livereload@0.5.2
+211 silly linkStuff connect-livereload@0.5.2 has /Users/spencermccullough/node_modules as its parent node_modules
+212 verbose linkBins connect-livereload@0.5.2
+213 verbose linkMans connect-livereload@0.5.2
+214 verbose rebuildBundles connect-livereload@0.5.2
+215 info install connect-livereload@0.5.2
+216 info postinstall connect-livereload@0.5.2
+217 verbose rebuild bundle /Users/spencermccullough/node_modules/ghost
+218 info build /Users/spencermccullough/node_modules/ghost
+219 info preinstall ghost@0.7.4
+220 verbose unsafe-perm in lifecycle true
+221 info linkStuff ghost@0.7.4
+222 silly linkStuff ghost@0.7.4 has /Users/spencermccullough/node_modules as its parent node_modules
+223 verbose linkBins ghost@0.7.4
+224 verbose linkMans ghost@0.7.4
+225 verbose rebuildBundles ghost@0.7.4
+226 verbose rebuildBundles [ '.bin',
+226 verbose rebuildBundles   'bcryptjs',
+226 verbose rebuildBundles   'bluebird',
+226 verbose rebuildBundles   'body-parser',
+226 verbose rebuildBundles   'bookshelf',
+226 verbose rebuildBundles   'busboy',
+226 verbose rebuildBundles   'chalk',
+226 verbose rebuildBundles   'cheerio',
+226 verbose rebuildBundles   'compression',
+226 verbose rebuildBundles   'connect-slashes',
+226 verbose rebuildBundles   'cookie-session',
+226 verbose rebuildBundles   'downsize',
+226 verbose rebuildBundles   'express',
+226 verbose rebuildBundles   'express-hbs',
+226 verbose rebuildBundles   'extract-zip',
+226 verbose rebuildBundles   'fs-extra',
+226 verbose rebuildBundles   'ghost-gql',
+226 verbose rebuildBundles   'glob',
+226 verbose rebuildBundles   'html-to-text',
+226 verbose rebuildBundles   'intl',
+226 verbose rebuildBundles   'intl-messageformat',
+226 verbose rebuildBundles   'jsonpath',
+226 verbose rebuildBundles   'knex',
+226 verbose rebuildBundles   'lodash',
+226 verbose rebuildBundles   'moment',
+226 verbose rebuildBundles   'morgan',
+226 verbose rebuildBundles   'mysql',
+226 verbose rebuildBundles   'node-uuid',
+226 verbose rebuildBundles   'nodemailer',
+226 verbose rebuildBundles   'oauth2orize',
+226 verbose rebuildBundles   'passport',
+226 verbose rebuildBundles   'passport-http-bearer',
+226 verbose rebuildBundles   'passport-oauth2-client-password',
+226 verbose rebuildBundles   'path-match',
+226 verbose rebuildBundles   'pg',
+226 verbose rebuildBundles   'request',
+226 verbose rebuildBundles   'rss',
+226 verbose rebuildBundles   'semver',
+226 verbose rebuildBundles   'showdown-ghost',
+226 verbose rebuildBundles   'sqlite3',
+226 verbose rebuildBundles   'unidecode',
+226 verbose rebuildBundles   'validator',
+226 verbose rebuildBundles   'xml' ]
+227 info install ghost@0.7.4
+228 info postinstall ghost@0.7.4
+229 verbose rebuild bundle /Users/spencermccullough/node_modules/grunt-karma
+230 info build /Users/spencermccullough/node_modules/grunt-karma
+231 info preinstall grunt-karma@0.10.1
+232 info linkStuff grunt-karma@0.10.1
+233 silly linkStuff grunt-karma@0.10.1 has /Users/spencermccullough/node_modules as its parent node_modules
+234 verbose linkBins grunt-karma@0.10.1
+235 verbose linkMans grunt-karma@0.10.1
+236 verbose rebuildBundles grunt-karma@0.10.1
+237 verbose rebuildBundles [ 'lodash' ]
+238 info install grunt-karma@0.10.1
+239 info postinstall grunt-karma@0.10.1
+240 verbose rebuild bundle /Users/spencermccullough/node_modules/gulp
+241 info build /Users/spencermccullough/node_modules/gulp
+242 info preinstall gulp@3.8.10
+243 info linkStuff gulp@3.8.10
+244 silly linkStuff gulp@3.8.10 has /Users/spencermccullough/node_modules as its parent node_modules
+245 verbose linkBins gulp@3.8.10
+246 verbose link bins [ { gulp: './bin/gulp.js' },
+246 verbose link bins   '/Users/spencermccullough/node_modules/.bin',
+246 verbose link bins   false ]
+247 verbose linkMans gulp@3.8.10
+248 verbose rebuildBundles gulp@3.8.10
+249 silly gentlyRm /Users/spencermccullough/node_modules/.bin/gulp is being purged
+250 verbose gentlyRm don't care about contents; nuking /Users/spencermccullough/node_modules/.bin/gulp
+251 verbose rebuildBundles [ '.bin',
+251 verbose rebuildBundles   'archy',
+251 verbose rebuildBundles   'chalk',
+251 verbose rebuildBundles   'deprecated',
+251 verbose rebuildBundles   'gulp-util',
+251 verbose rebuildBundles   'interpret',
+251 verbose rebuildBundles   'liftoff',
+251 verbose rebuildBundles   'minimist',
+251 verbose rebuildBundles   'orchestrator',
+251 verbose rebuildBundles   'pretty-hrtime',
+251 verbose rebuildBundles   'semver',
+251 verbose rebuildBundles   'tildify',
+251 verbose rebuildBundles   'v8flags',
+251 verbose rebuildBundles   'vinyl-fs' ]
+252 silly vacuum-fs purging /Users/spencermccullough/node_modules/.bin/gulp
+253 verbose stack Error: EACCES: permission denied, unlink '/Users/spencermccullough/node_modules/.bin/gulp'
+253 verbose stack     at Error (native)
+254 verbose cwd /Users/spencermccullough/Desktop/start
+255 error Darwin 14.5.0
+256 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install"
+257 error node v4.2.0
+258 error npm  v2.14.7
+259 error path /Users/spencermccullough/node_modules/.bin/gulp
+260 error code EACCES
+261 error errno -13
+262 error syscall unlink
+263 error Error: EACCES: permission denied, unlink '/Users/spencermccullough/node_modules/.bin/gulp'
+263 error     at Error (native)
+263 error  { [Error: EACCES: permission denied, unlink '/Users/spencermccullough/node_modules/.bin/gulp']
+263 error   errno: -13,
+263 error   code: 'EACCES',
+263 error   syscall: 'unlink',
+263 error   path: '/Users/spencermccullough/node_modules/.bin/gulp' }
+264 error Please try running this command again as root/Administrator.
+265 verbose exit [ -13, true ]
