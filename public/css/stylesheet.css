@@ -34,6 +34,10 @@
   color: white;
 }
 
+.firstMessage {
+  margin-right: 30px;
+}
+
 .secondMessage {
   height: 350px;
 }

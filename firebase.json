@@ -1,4 +1,5 @@
 {
+  "firebase": "datepickerdemo",
   "public": "public",
   "rewrites": [ {
     "source": "**",

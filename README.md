@@ -4,3 +4,5 @@ This is an example datepicker that allows you to reserve date ranges and disable
 See it in action <a href="https://datepickerdemo.firebaseapp.com/">here</a>.
 
 The actual datepicker dropdowns are from the <a href="https://material.angularjs.org/latest/demo/datepicker">Angular Material</a> library.
+
+To serve up this app: firebase serve.
